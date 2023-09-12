@@ -1,0 +1,190 @@
+main {
+  background-color: #1310ce;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.moon {
+  width: 170px;
+  height: 170px;
+  background-image: linear-gradient(170deg, white, #fcf5ae);
+  box-shadow: 1px 1px 25px#f0f0f0;
+  position: absolute;
+  top: 8%;
+  right: 8%;
+  border-radius: 50%;
+}
+
+.roof {
+  width: 100%;
+  height: 70px;
+  background-color: #843519;
+}
+
+.content-container {
+  width: 400px;
+  height: 90vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.chimney-top {
+  width: 100%;
+  height: 40px;
+  background-color: white;
+  border-bottom: 10px inset #f9f9f9;
+}
+.chimney {
+  width: 90%;
+  height: 190px;
+  background-color: #a94a23;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.brick-row {
+  display: flex;
+  flex-wrap: no-wrap;
+  width: fit-content;
+  position: relative;
+}
+
+.offset-even {
+  left: -58px;
+}
+
+.offset-odd {
+  left: -10px;
+}
+
+.brick {
+  width: 100px;
+  border: 3px solid black;
+  height: 50px;
+  display: inline-block;
+  margin: 0;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #a94a23, #843519);
+}
+
+.top-brick {
+  border-top: none;
+  height: 45px;
+}
+
+.bottom-brick {
+  border-bottom: none;
+  height: 45px;
+}
+
+.pant {
+  width: 100px;
+  height: 200px;
+  background-color: #cf0d2f;
+  background-image: linear-gradient(to right, #cf0d2f, #af0a26);
+  box-shadow: 2px 2px 15px black;
+}
+
+.pant-cuff {
+  width: 120px;
+  height: 40px;
+  background-color: white;
+}
+
+.boot-color {
+  background-color: black;
+}
+.ankle {
+  width: 70px;
+  height: 50px;
+}
+
+.foot {
+  width: 100px;
+  height: 60px;
+  position: relative;
+  right: 15px;
+  position: relative;
+  border-top-right-radius: 10%;
+}
+
+.curve {
+  height: 70px;
+  width: 85px;
+  position: absolute;
+  right: 55px;
+  border-bottom-left-radius: 65%;
+  border-bottom-right-radius: 30%;
+  border-top-left-radius: 15%;
+}
+
+.chimney-container {
+  z-index: 2;
+}
+
+.santa-container {
+  display: flex;
+  position: relative;
+  top: 40px;
+}
+
+.leg-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.leg1 {
+  transform-origin: bottom right;
+  animation: leg-wave1 3s linear infinite;
+  left: 60px;
+}
+
+.leg2 {
+  transform-origin: bottom left;
+  animation: leg-wave2 3s linear infinite;
+  left: 230px;
+  top: 20px;
+}
+
+@keyframes leg-wave1 {
+  0% {
+    transform: rotate(0);
+  }
+  25% {
+    transform: rotate(-20deg);
+  }
+  50% {
+    transform: rotate(0);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+
+@keyframes leg-wave2 {
+  0% {
+    transform: rotate(20deg) scaleX(-1);
+  }
+  25% {
+    transform: rotate(0deg) scaleX(-1);
+  }
+  50% {
+    transform: rotate(-10deg) scaleX(-1);
+  }
+  75% {
+    transform: rotate(0) scaleX(-1);
+  }
+  100% {
+    transform: rotate(20deg) scaleX(-1);
+  }
+}
